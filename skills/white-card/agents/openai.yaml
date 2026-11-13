@@ -1,0 +1,4 @@
+interface:
+  display_name: "白纸图文卡片"
+  short_description: "把文章和配图排成白底黑字卡片，自动分页、导出高清 PNG，并保留可编辑草稿"
+  default_prompt: "使用 $white-card，把我的文章和配图制作成可编辑图文卡片并导出高清 PNG。"

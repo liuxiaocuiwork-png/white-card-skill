@@ -1,0 +1,10 @@
+{
+  "name": "white-card-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Editable social cards with paragraph pagination and local PNG export",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright": "1.65.0" }
+}

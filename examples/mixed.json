@@ -1,0 +1,18 @@
+{
+  "nickname": "白纸笔记",
+  "date": "2026年11月13日 20:00",
+  "title": "图文混排，也可以很简单。",
+  "blueBadge": true,
+  "settings": { "ratio": "3:4", "scale": 2 },
+  "blocks": [
+    { "type": "text", "runs": [
+      { "text": "这是普通文字。" },
+      { "text": "这是重点。", "bold": true },
+      { "text": "这句话同时加粗和划线。", "bold": true, "underline": true }
+    ] },
+    { "type": "image", "src": "landscape.png", "widthPercent": 65, "fit": "16:9" },
+    { "type": "text", "text": "图片后继续写正文。图片可以在同一个编辑框中选中、缩放和替换。" },
+    { "type": "break" },
+    { "type": "text", "text": "这是手动指定的新一页，正文字号与前页一致。" }
+  ]
+}

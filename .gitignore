@@ -1,0 +1,10 @@
+node_modules/
+.cache/
+output/
+test-output/
+*.log
+.env
+.env.*
+.openai/
+.DS_Store
+Thumbs.db

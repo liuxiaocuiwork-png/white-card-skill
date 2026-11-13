@@ -1,0 +1,24 @@
+name: Verify cards
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: skills/white-card/package-lock.json
+      - run: npm ci --ignore-scripts
+        working-directory: skills/white-card
+      - run: npx playwright install --with-deps chromium
+        working-directory: skills/white-card
+      - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - run: node --test tests/draft.test.mjs
+      - run: node tests/render.test.mjs
